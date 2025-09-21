@@ -115,6 +115,27 @@ The API runs the model and returns: food class, confidence %, and calories.
 
 A Result Window pops up displaying the image and results.
 
+
+
+🚀 Future Improvements : 
+Expand Dataset: Add more food categories to cover a wider range of cuisines.
+
+Nutritional Info: Extend predictions to include protein, fat, carbs, etc., not just calories.
+
+Mobile App Version: Build an Android/iOS app for easier use.
+
+Cloud Deployment: Host the API on cloud services (Heroku, AWS, or Azure) so it works anywhere without running locally.
+
+Offline Mode: Package the model inside the GUI to work without internet/API dependency.
+
+User History: Save classification history for each user (with date/time).
+
+Improved Accuracy: Try other models (EfficientNet, Vision Transformers) or ensemble methods.
+
+Multi-language Support: Add more languages to the GUI for wider usability.
+
+
+
 _____________________________________________________________________--
 
 📘 README (عربي)
@@ -237,8 +258,24 @@ python main.py
 
 
 
+🚀 التطويرات المستقبلية (عربي):
 
 
+توسيع قاعدة البيانات: إضافة المزيد من أصناف الأطعمة لتغطية مطابخ مختلفة.
+
+معلومات غذائية شاملة: عرض بيانات إضافية (البروتين، الدهون، الكربوهيدرات) بجانب السعرات.
+
+إصدار للتطبيقات الذكية: بناء نسخة مخصصة للأندرويد و iOS.
+
+النشر على السحابة: رفع الـ API على خوادم سحابية (Heroku, AWS, Azure) ليعمل من أي مكان بدون الحاجة للتشغيل المحلي.
+
+وضع عدم الاتصال: دمج النموذج مباشرة مع الواجهة ليعمل بدون إنترنت أو API خارجي.
+
+حفظ السجل: تخزين تاريخ التصنيفات للمستخدم مع الوقت والتاريخ.
+
+تحسين الدقة: تجربة نماذج أخرى (EfficientNet, Vision Transformers) أو الجمع بين أكثر من نموذج.
+
+دعم لغات متعددة: إضافة لغات مختلفة للواجهة لزيادة سهولة الاستخدام.
 
 
 
