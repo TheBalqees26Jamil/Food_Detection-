@@ -263,7 +263,7 @@ python main.py
 
 
 🚀 التطويرات المستقبلية :
-
+```
 
 توسيع قاعدة البيانات:
       إضافة المزيد من أصناف الأطعمة لتغطية مطابخ مختلفة.
@@ -288,11 +288,11 @@ python main.py
 
 دعم لغات متعددة:
      إضافة لغات مختلفة للواجهة لزيادة سهولة الاستخدام.
-
+```
 
 # Model Accuracy:
 
-91.33 
+## 91.33 
 
 
 # Chart about the differences between Training Accuracy vs Test Accuracy:
@@ -300,9 +300,10 @@ python main.py
 ![Accuracy Chart](chart/pic.png)
 
 # Results:
-No Overfitting .
-A great Accuracy .
-
+```
+## No Overfitting .
+## A great Accuracy .
+```
 
 
 
