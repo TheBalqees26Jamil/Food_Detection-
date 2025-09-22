@@ -1,7 +1,7 @@
 """
 train_efficientnet.py
 تدريب EfficientNet مع تحسينات (augmentation, AdamW, label smoothing, mixed-precision...).
-استخدمي args لتعديل المسارات والهباراميتر بسهولة.
+
 """
 
 import os
@@ -20,7 +20,7 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import WeightedRandomSampler
 
-# حاول استيراد timm لمرونة أعلى؛ إذا غير متوفر نستخدم torchvision
+
 try:
     import timm
     TIMM_AVAILABLE = True
@@ -41,7 +41,7 @@ def build_model(model_name, num_classes, pretrained=True):
     model_name examples: 'efficientnet_b0', 'efficientnet_b3' (timm names may differ)
     """
     if TIMM_AVAILABLE:
-        # إذا استخدمت timm، استخدمي اسماء timm (مثال 'efficientnet_b0' يعمل)
+       
         model = timm.create_model(model_name, pretrained=pretrained, num_classes=num_classes)
         return model
     else:
@@ -103,14 +103,14 @@ def train_loop(args):
     print("Number of classes:", num_classes)
     print("Classes:", train_dataset.classes)
 
-    # توازن العيّنات (اختياري، يفيد لو فيه عدم توازن)
+    
     class_counts = [0]*num_classes
     for _, lbl in train_dataset:
         class_counts[lbl] += 1
     print("Train class counts:", class_counts)
 
     if args.balance_sampler:
-        # وزن عكسي حسب عدد العينات في كل فئة
+       
         class_weights = [0.0]*num_classes
         for i, c in enumerate(class_counts):
             class_weights[i] = 1.0 / (c + 1e-6)
@@ -130,12 +130,12 @@ def train_loop(args):
     try:
         criterion = nn.CrossEntropyLoss(label_smoothing=args.label_smoothing)
     except TypeError:
-        # older torch versions may not support label_smoothing
+       
         criterion = nn.CrossEntropyLoss()
 
     optimizer = optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
-    # scheduler: cosine annealing or ReduceLROnPlateau
+   
     if args.scheduler == "cosine":
         scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
     else:
@@ -273,3 +273,4 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     train_loop(args)
+
