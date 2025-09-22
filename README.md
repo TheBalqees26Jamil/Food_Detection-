@@ -60,6 +60,8 @@ Image Processing: Torchvision, PIL
 
 📂 Project Structure:
 
+
+
 Food_Project/
 │
 ├── api.py                 # FastAPI backend (model + API endpoint)
@@ -69,7 +71,7 @@ Food_Project/
 ├── models/
      └── best_model_efficientnet_b0.pth
      └── final_efficientnet_b0.pth      # Trained model
-│    └── train_log.csv   
+     └── train_log.csv   
 ├── interfaces/
 │   └── food.png           # Background image for GUI
 
