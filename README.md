@@ -61,20 +61,20 @@ Image Processing: Torchvision, PIL
 📂 Project Structure:
 
 
-
-Food_Project/
-│
-├── api.py                 # FastAPI backend (model + API endpoint)
-├── main.py                # PyQt6 GUI (frontend)
-├──chart/
-     └──pic.png
+```bash
+📂 Food_Project
+├── api.py               # FastAPI backend (model + API endpoint)
+├── main.py              # PyQt6 GUI (frontend)
+├── chart/
+│   └── pic.png
 ├── models/
-     └── best_model_efficientnet_b0.pth
-     └── final_efficientnet_b0.pth      # Trained model
-     └── train_log.csv   
-├── interfaces/
-│   └── food.png           # Background image for GUI
+│   ├── best_model_efficientnet_b0.pth
+│   ├── final_efficientnet_b0.pth  # Trained model
+│   └── train_log.csv
+└── interfaces/
+    └── food.png          # Background image for GUI
 
+```
 
 ⚙️ Setup & Installation
 
