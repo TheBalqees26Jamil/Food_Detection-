@@ -122,7 +122,30 @@ Click Detect → the GUI sends the image to the API.
 The API runs the model and returns: food class, confidence %, and calories.
 "A Result Window pops up displaying the image and results."
 
+#________________________________________________________________________________
 
+🔹 Model Training & Improvements
+During the training of the EfficientNet-B0 model, several optimization techniques were applied to improve performance and generalization:
+
+1 - Data Augmentation
+Applied random transformations (rotation, flipping, cropping, color jitter) to increase dataset variability and reduce overfitting.
+
+2 - Optimizer (AdamW)
+Used AdamW instead of traditional SGD/Adam to improve weight decay handling and achieve better convergence.
+
+3 - Label Smoothing
+Applied label smoothing during training to prevent the model from becoming overconfident and to improve robustness.
+
+4 - Mixed Precision Training
+Enabled mixed precision (torch.cuda.amp) to speed up training and reduce GPU memory usage without sacrificing accuracy.
+
+5 - Early Stopping & Best Model Saving
+Saved the best checkpoint based on validation accuracy to avoid overfitting and retain the most optimal weights.
+
+6 - Learning Rate Scheduling
+Used a scheduler to dynamically adjust the learning rate, helping the model converge more effectively.
+
+# __________________________________________________________________________
 
 🚀 Future Improvements : 
 ```
