@@ -64,6 +64,8 @@ Food_Project/
 │
 ├── api.py                 # FastAPI backend (model + API endpoint)
 ├── main.py                # PyQt6 GUI (frontend)
+├──chart/
+     └──pic.png
 ├── models/
      └── best_model_efficientnet_b0.pth
      └── final_efficientnet_b0.pth      # Trained model
@@ -179,7 +181,10 @@ _____________________________________________________________________--
 Food_Project/
 │
 ├── api.py                 # كود الخادم (الموديل + API)
-├── main.py                # كود الواجهة الرسومية
+├── main.py  
+# كود الواجهة الرسومية
+├──chart/
+     └──pic.png
 ├── models/
      └── best_model_efficientnet_b0.pth
      └── final_efficientnet_b0.pth       # النموذج المدرّب
@@ -284,12 +289,13 @@ python main.py
 91.33 
 
 
+# Chart about the differences between Training Accuracy vs Test Accuracy:
 
+![Accuracy Chart](chart/pic.png)
 
-
-
-
-
+# Results:
+No Overfitting .
+A great Accuracy .
 
 
 
