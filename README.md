@@ -1,7 +1,8 @@
 # Food_Detection-
 
 
-📘 README (English)
+📘 README (English):
+
 🍽️ Food Classification Project
 
 This project provides a desktop application for classifying food images using a deep learning model (ResNet50).
@@ -13,7 +14,7 @@ Upload an image of a meal from your computer.
 
 Detect the type of food using a trained ResNet50 model.
 
-Display:
+✅ Display:
 
 Meal name
 
@@ -26,20 +27,16 @@ Clean and modern UI with buttons (Choose Photo, Detect).
 Separate result window showing the uploaded image and classification results.
 
 📊Dataset:
-The dataset used in this project is the Food-101 dataset, which contains 101,000 images across 101 food categories (1,000 images per category).
+The dataset used in this project is the Food-101 tiny, which contains 200 images for each  food category.
 For this project, we selected 10 representative food classes to train and evaluate the model.
+Source: Food-101 tiny Dataset on Kaggle
 
-Source: Food-101 Dataset on Kaggle
+🛠️ Tech Stack :
 
-🛠️ Tech Stack 
 Frontend (GUI): PyQt6
-
 Backend (API): FastAPI + Uvicorn
-
 Model: PyTorch (ResNet50 fine-tuned on 10 food classes)
-
 Image Processing: Torchvision, PIL
-
 
 📂 Project Structure:
 
@@ -58,27 +55,19 @@ Food_Project/
 Clone the repository:
 git clone <repo-link>
 cd Food_Project
-
-
 Install dependencies:
 pip install -r requirements.txt
 
 
-Main requirements:
-
+🔹 Main requirements:
 PyQt6
-
 FastAPI
-
 Uvicorn
-
 Torch, Torchvision
-
 Pillow
-
 Requests
 
-Run the API (backend):
+🚀 Run the API (backend):
 python api.py
 You should see:
 Uvicorn running on http://127.0.0.1:8000
@@ -86,107 +75,83 @@ Run the GUI (frontend):
 python main.py
 
 
-📊 Classes & Calories
-The model supports 10 food classes:
-
+📊 Classes & Calories:
+The model supports 10 food classes (each class with 150 pictures) : 
 apple_pie (300 kcal)
-
 bibimbap (450 kcal)
-
 cannoli (350 kcal)
-
 chicken_curry (500 kcal)
-
 falafel (350 kcal)
-
 french_toast (400 kcal)
-
 ice_cream (200 kcal)
-
 ramen (550 kcal)
-
 sushi (300 kcal)
-
 tiramisu (450 kcal)
 
-Usage Flow
 
+🖼️ Usage Flow:
 Launch the app (main.py).
-
 Select an image via Choose Photo.
-
 Click Detect → the GUI sends the image to the API.
-
 The API runs the model and returns: food class, confidence %, and calories.
-
-A Result Window pops up displaying the image and results.
+"A Result Window pops up displaying the image and results."
 
 
 
 🚀 Future Improvements : 
-Expand Dataset: Add more food categories to cover a wider range of cuisines.
-
-Nutritional Info: Extend predictions to include protein, fat, carbs, etc., not just calories.
-
-Mobile App Version: Build an Android/iOS app for easier use.
-
-Cloud Deployment: Host the API on cloud services (Heroku, AWS, or Azure) so it works anywhere without running locally.
-
-Offline Mode: Package the model inside the GUI to work without internet/API dependency.
-
-User History: Save classification history for each user (with date/time).
-
-Improved Accuracy: Try other models (EfficientNet, Vision Transformers) or ensemble methods.
-
-Multi-language Support: Add more languages to the GUI for wider usability.
+Expand Dataset:
+     Add more food categories to cover a wider range of cuisines.
+Nutritional Info:  
+     Extend predictions to include protein, fat, carbs, etc., not just calories.
+Mobile App Version: 
+    Build an Android/iOS app for easier use.
+Cloud Deployment: 
+    Host the API on cloud services (Heroku, AWS, or Azure) so it works anywhere without running locally.
+Offline Mode:
+    Package the model inside the GUI to work without internet/API dependency.
+User History:
+    Save classification history for each user (with date/time).
+Improved Accuracy: 
+    Try other models (EfficientNet, Vision Transformers) or ensemble methods.
+Multi-language Support:
+     Add more languages to the GUI for wider usability.
 
 
 
 _____________________________________________________________________--
 
-📘 README (عربي)
-🍽️ مشروع تصنيف الأطعمة
+📘 README (عربي):
+🍽️ مشروع تصنيف الأطعمة:
 
 هذا المشروع يقدم تطبيق سطح مكتب لتصنيف صور الأطعمة باستخدام نموذج تعلم عميق (ResNet50).
 المشروع يدمج بين واجهة رسومية (PyQt6) و خادم خلفي (FastAPI) يعمل كوسيط بين الواجهة والموديل.
 
 
-المزايا:
+🚀 المزايا:
 
 رفع صورة وجبة من جهاز المستخدم.
-
 التعرف على نوع الطعام باستخدام نموذج ResNet50 مدرّب مسبقًا.
 
-عرض:
+✅ عرض:
 
 اسم الوجبة
-
 نسبة الثقة
-
 السعرات الحرارية المتوقعة
-
 واجهة رسومية حديثة مع أزرار (Choose Photo, Detect).
-
 نافذة منفصلة لعرض النتيجة مع الصورة والبيانات.
 
 
-
 📊 البيانات:
-تم استخدام مجموعة بيانات Food-101، والتي تحتوي على 101,000 صورة موزعة على 101 صنف من الأطعمة (1000 صورة لكل صنف).
+تم استخدام مجموعة بيانات   Food-101 tiny ، والتي تحتوي على 200 صورة لكل صنف من الـ 10 أصناف من الأطعمة 
 في هذا المشروع، قمنا باختيار 10 أصناف فقط من هذه المجموعة لتدريب النموذج وتقييمه.
+المصدر: Food-101 tiny على Kaggle
 
-المصدر: Food-101 Dataset على Kaggle
 
-
-بيئة العمل:
-
+🛠️ بيئة العمل:
 الواجهة الأمامية (GUI): PyQt6
-
 الخلفية (API): FastAPI + Uvicorn
+النموذج: PyTorch (ResNet50 مدرّب على 10 أصناف طعام) كل صنف 200 صوره.
 
-النموذج: PyTorch (ResNet50 مدرّب على 10 أصناف طعام) كل صنف 150 صوره.
-
-معالجة الصور: Torchvision, PIL
 
 📂 هيكل المشروع:
 Food_Project/
@@ -203,13 +168,13 @@ Food_Project/
 تحميل المشروع:
 git clone <repo-link>
 cd Food_Project
-
 تثبيت المكتبات المطلوبة:
 pip install -r requirements.txt
 
 
 
-أهم المكتبات:
+
+🔹أهم المكتبات:
 
 PyQt6
 
@@ -224,7 +189,7 @@ Pillow
 Requests
 
 
-تشغيل الخادم (API):
+🚀تشغيل الخادم (API):
 
 python api.py
 
@@ -234,31 +199,21 @@ Uvicorn running on http://127.0.0.1:8000
 python main.py
 
 
-📊 الأصناف والسعرات الحرارية
+📊 الأصناف والسعرات الحرارية:
 
 النموذج يدعم 10 أصناف طعام:
-
 فطيرة التفاح (300 سعرة)
-
 بيبيمباب (450 سعرة)
-
 كانولي (350 سعرة)
-
 كاري الدجاج (500 سعرة)
-
 فلافل (350 سعرة)
-
 فرنش توست (400 سعرة)
-
 آيس كريم (200 سعرة)
-
 رامن (550 سعرة)
-
 سوشي (300 سعرة)
-
 تيراميسو (450 سعرة)
 
-🖼️ كيفية الاستخدام
+🖼️ كيفية الاستخدام:
 
 تشغيل الواجهة (main.py).
 
@@ -275,35 +230,29 @@ python main.py
 🚀 التطويرات المستقبلية :
 
 
-توسيع قاعدة البيانات: إضافة المزيد من أصناف الأطعمة لتغطية مطابخ مختلفة.
+توسيع قاعدة البيانات:
+      إضافة المزيد من أصناف الأطعمة لتغطية مطابخ مختلفة.
 
-معلومات غذائية شاملة: عرض بيانات إضافية (البروتين، الدهون، الكربوهيدرات) بجانب السعرات.
+معلومات غذائية شاملة:  
+      عرض بيانات إضافية (البروتين، الدهون، الكربوهيدرات) بجانب السعرات.
 
-إصدار للتطبيقات الذكية: بناء نسخة مخصصة للأندرويد و iOS.
+إصدار للتطبيقات الذكية: 
+      بناء نسخة مخصصة للأندرويد و iOS.
 
-النشر على السحابة: رفع الـ API على خوادم سحابية (Heroku, AWS, Azure) ليعمل من أي مكان بدون الحاجة للتشغيل المحلي.
+النشر على السحابة: 
+      رفع الـ API على خوادم سحابية (Heroku, AWS, Azure) ليعمل من أي مكان بدون الحاجة للتشغيل المحلي.
 
-وضع عدم الاتصال: دمج النموذج مباشرة مع الواجهة ليعمل بدون إنترنت أو API خارجي.
+وضع عدم الاتصال: 
+      دمج النموذج مباشرة مع الواجهة ليعمل بدون إنترنت أو API خارجي.
 
-حفظ السجل: تخزين تاريخ التصنيفات للمستخدم مع الوقت والتاريخ.
+حفظ السجل:
+      تخزين تاريخ التصنيفات للمستخدم مع الوقت والتاريخ.
 
-تحسين الدقة: تجربة نماذج أخرى (EfficientNet, Vision Transformers) أو الجمع بين أكثر من نموذج.
+تحسين الدقة: 
+     تجربة نماذج أخرى (EfficientNet, Vision Transformers) أو الجمع بين أكثر من نموذج.
 
-دعم لغات متعددة: إضافة لغات مختلفة للواجهة لزيادة سهولة الاستخدام.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+دعم لغات متعددة:
+     إضافة لغات مختلفة للواجهة لزيادة سهولة الاستخدام.
 
 
 
