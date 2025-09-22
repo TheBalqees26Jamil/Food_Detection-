@@ -31,6 +31,9 @@ The dataset used in this project is the Food-101 tiny, which contains 200 images
 For this project, we selected 10 representative food classes to train and evaluate the model.
 Source: Food-101 tiny Dataset on Kaggle
 
+Link : 
+Click here https://www.kaggle.com/datasets/msarmi9/food101tiny
+
 
 ✅ Model Overview : 
 
@@ -195,7 +198,8 @@ _____________________________________________________________________--
 تم استخدام مجموعة بيانات   Food-101 tiny ، والتي تحتوي على 200 صورة لكل صنف من الـ 10 أصناف من الأطعمة 
 في هذا المشروع، قمنا باختيار 10 أصناف فقط من هذه المجموعة لتدريب النموذج وتقييمه.
 المصدر: Food-101 tiny على Kaggle
-
+رابط البيانات : 
+اضغط هنا https://www.kaggle.com/datasets/msarmi9/food101tiny
 
 🛠️ بيئة العمل:
 الواجهة الأمامية (GUI): PyQt6
