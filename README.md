@@ -125,6 +125,7 @@ The API runs the model and returns: food class, confidence %, and calories.
 
 
 🚀 Future Improvements : 
+```
 Expand Dataset:
      Add more food categories to cover a wider range of cuisines.
 Nutritional Info:  
@@ -142,7 +143,7 @@ Improved Accuracy:
 Multi-language Support:
      Add more languages to the GUI for wider usability.
 
-
+```
 
 _____________________________________________________________________--
 
