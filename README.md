@@ -12,7 +12,7 @@ It integrates a PyQt6 graphical interface with a FastAPI backend, which serves t
 
 Upload an image of a meal from your computer.
 
-Detect the type of food using a trained ResNet50 model.
+Detect the type of food using a trained efficientnet_b0 model.
 
 ✅ Display:
 
@@ -31,11 +31,31 @@ The dataset used in this project is the Food-101 tiny, which contains 200 images
 For this project, we selected 10 representative food classes to train and evaluate the model.
 Source: Food-101 tiny Dataset on Kaggle
 
+
+✅ Model Overview : 
+
+Food Classifier using EfficientNet
+This project implements a food image classifier using EfficientNet with several modern deep learning techniques to improve performance:
+
+Backbone: EfficientNet-B0 (with optional use of timm for more flexible architectures).
+Data Augmentation: Random resized crop, horizontal flip, rotation, and color jitter to increase robustness.
+Optimizer: AdamW with weight decay for stable training.
+Label Smoothing: Reduces overconfidence in predictions.
+Mixed-Precision Training: Uses torch.cuda.amp to accelerate training on GPUs while saving memory.
+Learning Rate Scheduler: Cosine annealing or ReduceLROnPlateau.
+Balanced Sampling: Optionally uses weighted sampler to handle class imbalance.
+Early Stopping: Stops training when validation accuracy does not improve for several epochs.
+Evaluation Metrics: Accuracy and loss for both training and validation.
+Deployment: FastAPI-based REST API for predicting food class, confidence, and estimated calories from images.
+Number of classes: 10 (apple_pie, bibimbap, cannoli, chicken_curry, falafel, french_toast, ice_cream, ramen, sushi, tiramisu)
+
+This model can be easily extended to more classes or different EfficientNet variants (B1-B7) if needed.
+
 🛠️ Tech Stack :
 
 Frontend (GUI): PyQt6
 Backend (API): FastAPI + Uvicorn
-Model: PyTorch (ResNet50 fine-tuned on 10 food classes)
+Model: PyTorch (efficientnet_b0 fine-tuned on 10 food classes)
 Image Processing: Torchvision, PIL
 
 📂 Project Structure:
@@ -45,7 +65,9 @@ Food_Project/
 ├── api.py                 # FastAPI backend (model + API endpoint)
 ├── main.py                # PyQt6 GUI (frontend)
 ├── models/
-│   └── best_model_resnet50_final.pth   # Trained model
+     └── best_model_efficientnet_b0.pth
+     └── final_efficientnet_b0.pth      # Trained model
+│    └── train_log.csv   
 ├── interfaces/
 │   └── food.png           # Background image for GUI
 
@@ -130,7 +152,7 @@ _____________________________________________________________________--
 🚀 المزايا:
 
 رفع صورة وجبة من جهاز المستخدم.
-التعرف على نوع الطعام باستخدام نموذج ResNet50 مدرّب مسبقًا.
+التعرف على نوع الطعام باستخدام نموذج efficientnet_b0 مدرّب مسبقًا.
 
 ✅ عرض:
 
@@ -159,7 +181,9 @@ Food_Project/
 ├── api.py                 # كود الخادم (الموديل + API)
 ├── main.py                # كود الواجهة الرسومية
 ├── models/
-│   └── best_model_resnet50_final.pth   # النموذج المدرّب
+     └── best_model_efficientnet_b0.pth
+     └── final_efficientnet_b0.pth       # النموذج المدرّب
+│    └── train_log.csv     
 ├── interfaces/
 │   └── food.png           # صورة الخلفية للواجهة
 
@@ -254,6 +278,10 @@ python main.py
 دعم لغات متعددة:
      إضافة لغات مختلفة للواجهة لزيادة سهولة الاستخدام.
 
+
+# Model Accuracy:
+
+91.33 
 
 
 
