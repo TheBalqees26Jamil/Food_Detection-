@@ -301,8 +301,8 @@ python main.py
 
 # Results:
 ```
-## No Overfitting .
-## A great Accuracy .
+No Overfitting .
+A great Accuracy .
 ```
 
 
